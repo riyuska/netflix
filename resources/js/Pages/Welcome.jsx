@@ -62,7 +62,7 @@ export default function Welcome(props) {
                                             href="https://laravel.com/docs"
                                             className="underline text-gray-900 dark:text-white"
                                         >
-                                            Documentation
+                                            Alkhairunas Riyuska
                                         </a>
                                     </div>
                                 </div>
