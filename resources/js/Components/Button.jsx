@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import PropTypes from "prop-types";
 
 Button.propTypes = {
@@ -16,18 +16,18 @@ Button.propTypes = {
 };
 
 export default function Button({
-    type = 'submit',
-    className = '',
+    type = "submit",
+    className = "",
     variant = "primary",
     processing,
-    children
+    children,
 }) {
     return (
         <button
             type={type}
-            className={
-                `rounded-2xl py-[13px] text-center w-full ${processing && "opacity-30"} btn-${variant} ${className}`
-            }
+            className={`rounded-2xl py-[13px] text-center w-full ${
+                processing && "opacity-30"
+            } btn-${variant} ${className}`}
             disabled={processing}
         >
             {children}

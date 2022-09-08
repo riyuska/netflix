@@ -38,13 +38,17 @@ Route::redirect('/', '/prototype/login');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Welcome');
-});
-// ->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::prefix('prototype')->group(function () {
+Route::prefix('prototype')->name('prototype.')->group(function () {
     route::get('/login', function(){
         return Inertia::render('Prototype/Login');
-    });
+    })->name('login');
+
+    route::get('/register', function(){
+        // return Inertia::render('Prototype/Login');
+        return 'Alkhairunas Riyuska';
+    })->name('register');
 });
 
 require __DIR__.'/auth.php';
